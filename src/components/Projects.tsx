@@ -33,7 +33,7 @@ const Projects = () => {
     : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-20 lg:py-32 bg-secondary">
+    <section id="projects" className="py-12 md:py-20 lg:py-32 bg-secondary">
       <div className="container-custom">
         {/* Header */}
         <motion.div
@@ -41,7 +41,7 @@ const Projects = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
           <p className="section-subtitle">
             We invested our hard work for people just like you that insist on a great user experience.
@@ -56,13 +56,13 @@ const Projects = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-2 mb-12"
+          className="flex flex-wrap justify-center gap-1.5 md:gap-2 mb-8 md:mb-12"
         >
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-3 font-medium transition-all duration-300 ${
+              className={`px-3 md:px-6 py-2 md:py-3 text-xs md:text-sm font-medium transition-all duration-300 ${
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-background text-foreground hover:bg-primary hover:text-primary-foreground"
@@ -76,7 +76,7 @@ const Projects = () => {
         {/* Projects Grid */}
         <motion.div
           layout
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3 lg:gap-4"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (
@@ -100,13 +100,13 @@ const Projects = () => {
                     whileHover={{ opacity: 1, y: 0 }}
                     className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300"
                   >
-                    <div className="w-12 h-12 bg-primary flex items-center justify-center mx-auto mb-4">
-                      <Plus className="w-6 h-6 text-primary-foreground" />
+                    <div className="w-8 h-8 md:w-12 md:h-12 bg-primary flex items-center justify-center mx-auto mb-2 md:mb-4">
+                      <Plus className="w-4 h-4 md:w-6 md:h-6 text-primary-foreground" />
                     </div>
-                    <h4 className="font-serif text-lg font-bold text-dark-foreground px-4">
+                    <h4 className="font-serif text-xs md:text-base lg:text-lg font-bold text-dark-foreground px-2 md:px-4">
                       {project.title}
                     </h4>
-                    <p className="text-primary text-sm">{project.category}</p>
+                    <p className="text-primary text-xs md:text-sm">{project.category}</p>
                   </motion.div>
                 </div>
               </motion.div>

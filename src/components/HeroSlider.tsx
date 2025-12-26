@@ -43,7 +43,7 @@ const HeroSlider = () => {
   }, [nextSlide]);
 
   return (
-    <section id="home" className="relative h-[100vh] min-h-[600px] overflow-hidden">
+    <section id="home" className="relative h-[80vh] md:h-[90vh] lg:h-[100vh] min-h-[500px] md:min-h-[600px] overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -62,8 +62,8 @@ const HeroSlider = () => {
       </AnimatePresence>
 
       {/* Content */}
-      <div className="relative h-full container-custom flex items-center">
-        <div className="max-w-3xl">
+      <div className="relative h-full container-custom flex items-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl pt-16 md:pt-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -92,7 +92,7 @@ const HeroSlider = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.9 }}
-                className="text-lg md:text-xl text-dark-foreground/80 mb-8 max-w-xl"
+                className="text-base md:text-lg lg:text-xl text-dark-foreground/80 mb-6 md:mb-8 max-w-xl"
               >
                 {slides[currentSlide].description}
               </motion.p>
@@ -117,15 +117,15 @@ const HeroSlider = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 bg-dark-foreground/20 hover:bg-primary text-dark-foreground flex items-center justify-center transition-all duration-300"
+        className="absolute left-2 md:left-4 lg:left-8 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-dark-foreground/20 hover:bg-primary text-dark-foreground flex items-center justify-center transition-all duration-300"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 bg-dark-foreground/20 hover:bg-primary text-dark-foreground flex items-center justify-center transition-all duration-300"
+        className="absolute right-2 md:right-4 lg:right-8 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-dark-foreground/20 hover:bg-primary text-dark-foreground flex items-center justify-center transition-all duration-300"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
       </button>
 
       {/* Slide Indicators */}
