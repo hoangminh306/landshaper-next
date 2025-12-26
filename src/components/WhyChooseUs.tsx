@@ -44,7 +44,7 @@ const Counter = ({ value, suffix }: { value: number; suffix: string }) => {
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="font-serif text-5xl md:text-6xl font-bold text-primary">
+    <span ref={ref} className="font-serif text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary">
       {count}{suffix}
     </span>
   );
@@ -83,37 +83,37 @@ const WhyChooseUs = () => {
               </a>
 
               {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-2 gap-3 md:gap-6 lg:gap-8">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: index * 0.15 }}
-                    className="text-center p-6 bg-dark-foreground/5 border border-dark-foreground/10"
+                    className="text-center p-3 md:p-4 lg:p-6 bg-dark-foreground/5 border border-dark-foreground/10"
                   >
                     <Counter value={stat.value} suffix={stat.suffix} />
-                    <p className="text-dark-foreground/70 mt-2">{stat.label}</p>
+                    <p className="text-dark-foreground/70 mt-1 md:mt-2 text-xs md:text-sm lg:text-base">{stat.label}</p>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
 
             {/* Right - Features */}
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-3 md:gap-4 lg:gap-6">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group p-6 bg-dark-foreground/5 border border-dark-foreground/10 hover:bg-primary transition-all duration-300 cursor-pointer"
+                  className="group p-3 md:p-4 lg:p-6 bg-dark-foreground/5 border border-dark-foreground/10 hover:bg-primary transition-all duration-300 cursor-pointer"
                 >
-                  <feature.icon className="w-10 h-10 text-primary group-hover:text-primary-foreground transition-colors mb-4" />
-                  <h4 className="font-serif text-lg font-bold text-dark-foreground group-hover:text-primary-foreground transition-colors mb-2">
+                  <feature.icon className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-primary group-hover:text-primary-foreground transition-colors mb-2 md:mb-3 lg:mb-4" />
+                  <h4 className="font-serif text-sm md:text-base lg:text-lg font-bold text-dark-foreground group-hover:text-primary-foreground transition-colors mb-1 md:mb-2">
                     {feature.title}
                   </h4>
-                  <p className="text-dark-foreground/70 group-hover:text-primary-foreground/80 text-sm transition-colors">
+                  <p className="text-dark-foreground/70 group-hover:text-primary-foreground/80 text-xs md:text-sm transition-colors hidden md:block">
                     {feature.description}
                   </p>
                 </motion.div>

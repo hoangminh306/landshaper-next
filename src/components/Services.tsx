@@ -35,9 +35,9 @@ const Services = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="py-20 lg:py-32 bg-background">
+    <section id="services" className="py-12 md:py-20 lg:py-32 bg-background">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
           {/* Left Content */}
           <motion.div
             ref={ref}
@@ -64,7 +64,7 @@ const Services = () => {
           </motion.div>
 
           {/* Right - Services Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-3 md:gap-4 lg:gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -73,7 +73,7 @@ const Services = () => {
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 className="group cursor-pointer"
               >
-                <div className="relative overflow-hidden mb-4">
+                <div className="relative overflow-hidden mb-2 md:mb-4">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -82,10 +82,10 @@ const Services = () => {
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <h3 className="font-serif text-sm md:text-base lg:text-xl font-bold text-foreground mb-1 md:mb-2 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed hidden md:block">
                   {service.description}
                 </p>
               </motion.div>

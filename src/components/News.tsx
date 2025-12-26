@@ -37,20 +37,20 @@ const News = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section className="py-12 md:py-20 lg:py-32 bg-background">
       <div className="container-custom">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
           <p className="section-subtitle">Latest Updates</p>
           <h2 className="section-title">News & Articles</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {news.map((item, index) => (
             <motion.article
               key={item.title}

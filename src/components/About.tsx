@@ -30,16 +30,16 @@ const About = () => {
               <img
                 src={hero2}
                 alt="About Landshaper"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[350px] md:h-[450px] lg:h-[500px] object-cover"
               />
               {/* Experience Badge */}
-              <div className="absolute -bottom-8 -right-8 md:bottom-8 md:right-8 bg-primary p-8 text-center">
-                <span className="block font-serif text-5xl font-bold text-primary-foreground">30+</span>
-                <span className="text-primary-foreground/90 text-sm uppercase tracking-wider">Years Experience</span>
+              <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 bg-primary p-4 md:p-6 lg:p-8 text-center">
+                <span className="block font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">30+</span>
+                <span className="text-primary-foreground/90 text-xs md:text-sm uppercase tracking-wider">Years Experience</span>
               </div>
               {/* Play Button */}
-              <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary-foreground flex items-center justify-center group hover:bg-primary transition-colors">
-                <Play className="w-8 h-8 text-primary group-hover:text-primary-foreground fill-current transition-colors" />
+              <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-primary-foreground flex items-center justify-center group hover:bg-primary transition-colors">
+                <Play className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-primary group-hover:text-primary-foreground fill-current transition-colors" />
               </button>
             </div>
           </motion.div>
