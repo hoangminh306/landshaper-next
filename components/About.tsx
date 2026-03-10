@@ -28,13 +28,17 @@ const About = () => {
             <div className="relative">
               <img
                 src="/images/hero-2.jpg"
-                alt="About Landshaper"
+                alt="About Dong A"
                 className="w-full h-[350px] md:h-[450px] lg:h-[500px] object-cover"
               />
               {/* Experience Badge */}
               <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 bg-primary p-4 md:p-6 lg:p-8 text-center">
-                <span className="block font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">30+</span>
-                <span className="text-primary-foreground/90 text-xs md:text-sm uppercase tracking-wider">Years Experience</span>
+                <span className="block font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
+                  30+
+                </span>
+                <span className="text-primary-foreground/90 text-xs md:text-sm uppercase tracking-wider">
+                  Years Experience
+                </span>
               </div>
               {/* Play Button */}
               <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-primary-foreground flex items-center justify-center group hover:bg-primary transition-colors">
@@ -54,13 +58,17 @@ const About = () => {
               We Are the Leader in Landscaping Industry
             </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Landshaper has been a trusted name in the landscaping industry for over three decades. 
-              Our team of certified professionals brings creativity, expertise, and dedication to every project, 
-              whether it&apos;s a small residential garden or a large commercial landscape.
+              Landshaper has been a trusted name in the landscaping industry for
+              over three decades. Our team of certified professionals brings
+              creativity, expertise, and dedication to every project, whether
+              it&apos;s a small residential garden or a large commercial
+              landscape.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              We believe that a beautiful outdoor space enhances your quality of life. That&apos;s why we&apos;re committed 
-              to delivering exceptional results that exceed your expectations while respecting your budget and timeline.
+              We believe that a beautiful outdoor space enhances your quality of
+              life. That&apos;s why we&apos;re committed to delivering
+              exceptional results that exceed your expectations while respecting
+              your budget and timeline.
             </p>
 
             {/* Highlights */}

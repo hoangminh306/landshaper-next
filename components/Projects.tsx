@@ -2,17 +2,55 @@ import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 
-const categories = ["All", "Lawn Care", "Garden Care", "Snow Removal", "Planting"];
+const categories = [
+  "All",
+  "Lawn Care",
+  "Garden Care",
+  "Snow Removal",
+  "Planting",
+];
 
 const projects = [
-  { image: "/images/gallery-1.jpg", title: "Modern Backyard Design", category: "Garden Care" },
-  { image: "/images/gallery-2.jpg", title: "Water Feature Installation", category: "Planting" },
-  { image: "/images/gallery-3.jpg", title: "Pool Landscaping", category: "Garden Care" },
-  { image: "/images/gallery-4.jpg", title: "Front Yard Makeover", category: "Lawn Care" },
-  { image: "/images/gallery-5.jpg", title: "Zen Garden Creation", category: "Garden Care" },
-  { image: "/images/gallery-6.jpg", title: "Retaining Wall Project", category: "Planting" },
-  { image: "/images/gallery-7.jpg", title: "Outdoor Fire Pit Area", category: "Garden Care" },
-  { image: "/images/gallery-8.jpg", title: "Cottage Garden Design", category: "Planting" },
+  {
+    image: "/images/gallery-1.jpg",
+    title: "Modern Backyard Design",
+    category: "Garden Care",
+  },
+  {
+    image: "/images/gallery-2.jpg",
+    title: "Water Feature Installation",
+    category: "Planting",
+  },
+  {
+    image: "/images/gallery-3.jpg",
+    title: "Pool Landscaping",
+    category: "Garden Care",
+  },
+  {
+    image: "/images/gallery-4.jpg",
+    title: "Front Yard Makeover",
+    category: "Lawn Care",
+  },
+  {
+    image: "/images/gallery-5.jpg",
+    title: "Zen Garden Creation",
+    category: "Garden Care",
+  },
+  {
+    image: "/images/gallery-6.jpg",
+    title: "Retaining Wall Project",
+    category: "Planting",
+  },
+  {
+    image: "/images/gallery-7.jpg",
+    title: "Outdoor Fire Pit Area",
+    category: "Garden Care",
+  },
+  {
+    image: "/images/gallery-8.jpg",
+    title: "Cottage Garden Design",
+    category: "Planting",
+  },
 ];
 
 const Projects = () => {
@@ -20,12 +58,13 @@ const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const filteredProjects = activeCategory === "All"
-    ? projects
-    : projects.filter((p) => p.category === activeCategory);
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-12 md:py-20 lg:py-32 bg-secondary">
+    <section id="projects" className="py-12 md:py-20 bg-secondary">
       <div className="container-custom">
         {/* Header */}
         <motion.div
@@ -36,7 +75,8 @@ const Projects = () => {
           className="text-center mb-8 md:mb-12"
         >
           <p className="section-subtitle">
-            We invested our hard work for people just like you that insist on a great user experience.
+            We invested our hard work for people just like you that insist on a
+            great user experience.
           </p>
           <h2 className="section-title">
             Latest<span className="text-primary">Projects</span>
@@ -98,7 +138,9 @@ const Projects = () => {
                     <h4 className="font-serif text-xs md:text-base lg:text-lg font-bold text-dark-foreground px-2 md:px-4">
                       {project.title}
                     </h4>
-                    <p className="text-primary text-xs md:text-sm">{project.category}</p>
+                    <p className="text-primary text-xs md:text-sm">
+                      {project.category}
+                    </p>
                   </motion.div>
                 </div>
               </motion.div>

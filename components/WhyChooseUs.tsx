@@ -3,19 +3,19 @@ import { motion, useInView } from "framer-motion";
 import { Award, Users, Shield, Heart, Trophy, CheckCircle } from "lucide-react";
 
 const features = [
-  { icon: Award, title: "30 Years of Experience", description: "We have a range of water fountain specialists can design the better solution for you." },
-  { icon: Users, title: "True Lawn Specialists", description: "We have a range of water fountain specialists can design the better solution for you." },
-  { icon: Shield, title: "Licensed & Insured", description: "We have a range of water fountain specialists can design the better solution for you." },
-  { icon: Heart, title: "Honest and Dependable", description: "We have a range of water fountain specialists can design the better solution for you." },
-  { icon: Trophy, title: "Award Winning Company", description: "We have a range of water fountain specialists can design the better solution for you." },
-  { icon: CheckCircle, title: "800+ Successful Projects", description: "We have a range of water fountain specialists can design the better solution for you." },
+  { icon: Award, title: "Nhiều năm kinh nghiệm", description: "Đội ngũ chuyên gia giàu kinh nghiệm trong lĩnh vực thuốc bảo vệ thực vật." },
+  { icon: Users, title: "Chuyên gia nông nghiệp", description: "Đội ngũ kỹ sư nông nghiệp tư vấn giải pháp tối ưu cho cây trồng." },
+  { icon: Shield, title: "Chứng nhận chất lượng", description: "Sản phẩm đạt tiêu chuẩn kiểm định của QUATEST3 và các cơ quan uy tín." },
+  { icon: Heart, title: "Uy tín & Tận tâm", description: "Luôn đặt quyền lợi khách hàng lên hàng đầu, cam kết chất lượng." },
+  { icon: Trophy, title: "Thương hiệu hàng đầu", description: "Được tin dùng bởi hàng nghìn đại lý và nông dân trên cả nước." },
+  { icon: CheckCircle, title: "800+ Đại lý phân phối", description: "Mạng lưới phân phối rộng khắp các tỉnh thành." },
 ];
 
 const stats = [
-  { value: 800, suffix: "+", label: "Successful Projects" },
-  { value: 30, suffix: "+", label: "Years Experience" },
-  { value: 150, suffix: "+", label: "Expert Team Members" },
-  { value: 100, suffix: "%", label: "Client Satisfaction" },
+  { value: 800, suffix: "+", label: "Đại lý phân phối" },
+  { value: 30, suffix: "+", label: "Năm kinh nghiệm" },
+  { value: 150, suffix: "+", label: "Sản phẩm" },
+  { value: 100, suffix: "%", label: "Khách hàng hài lòng" },
 ];
 
 const Counter = ({ value, suffix }: { value: number; suffix: string }) => {
@@ -73,12 +73,12 @@ const WhyChooseUs = () => {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8 }}
             >
-              <p className="text-primary font-semibold mb-2 uppercase tracking-wider">30 Years of Experience</p>
+              <p className="text-primary font-semibold mb-2 uppercase tracking-wider">Nhiều năm kinh nghiệm</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-dark-foreground mb-8 leading-tight">
-                Why Choosing Landshaper
+                Tại sao chọn chúng tôi
               </h2>
               <a href="#contact" className="btn-primary mb-12 inline-block">
-                Contact Us
+                Liên hệ ngay
               </a>
 
               {/* Stats Grid */}

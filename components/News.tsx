@@ -5,30 +5,30 @@ import { Calendar, User, ArrowRight, MessageSquare } from "lucide-react";
 const news = [
   {
     image: "/images/gallery-1.jpg",
-    date: "Dec 20, 2024",
+    date: "20/12/2024",
     author: "Admin",
     comments: 3,
-    title: "10 Tips for a Beautiful Winter Garden",
+    title: "10 mẹo chăm sóc vườn cây mùa đông",
     excerpt:
-      "Learn how to keep your garden looking great even during the coldest months of the year...",
+      "Tìm hiểu cách giữ cho vườn cây luôn xanh tốt ngay cả trong những tháng lạnh nhất trong năm...",
   },
   {
     image: "/images/gallery-2.jpg",
-    date: "Dec 15, 2024",
+    date: "15/12/2024",
     author: "Admin",
     comments: 5,
-    title: "The Benefits of Professional Landscaping",
+    title: "Lợi ích của thuốc bảo vệ thực vật chất lượng",
     excerpt:
-      "Discover why investing in professional landscaping services can transform your property...",
+      "Khám phá lý do tại sao đầu tư vào sản phẩm chất lượng cao giúp nâng cao năng suất cây trồng...",
   },
   {
     image: "/images/gallery-3.jpg",
-    date: "Dec 10, 2024",
+    date: "10/12/2024",
     author: "Admin",
     comments: 2,
-    title: "Water Conservation in Your Landscape",
+    title: "Tiết kiệm nước trong canh tác nông nghiệp",
     excerpt:
-      "Explore sustainable irrigation practices that save water while keeping your garden thriving...",
+      "Khám phá các phương pháp tưới tiêu bền vững giúp tiết kiệm nước mà vẫn đảm bảo cây trồng phát triển tốt...",
   },
 ];
 
@@ -37,7 +37,7 @@ const News = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-12 md:py-20 lg:py-32 bg-background">
+    <section className="py-12 md:py-20 bg-background">
       <div className="container-custom">
         <motion.div
           ref={ref}
@@ -84,7 +84,7 @@ const News = () => {
                   </div>
                   <div className="flex items-center gap-1">
                     <MessageSquare className="w-4 h-4" />
-                    {item.comments} Comments
+                    {item.comments} Bình luận
                   </div>
                 </div>
 
@@ -99,7 +99,7 @@ const News = () => {
                   href="#"
                   className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
                 >
-                  Read More
+                  Xem thêm
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

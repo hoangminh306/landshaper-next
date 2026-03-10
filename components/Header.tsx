@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   Menu,
   X,
@@ -10,10 +10,14 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,13 +28,52 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Projects", href: "#projects" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
+    { name: "Trang chủ", href: "#home" },
+    { name: "Giới thiệu", href: "#about" },
+    { name: "Sản phẩm", href: "/products" },
+    { name: "Đánh giá", href: "#testimonials" },
+    // { name: "Liên hệ", href: "#contact" },
   ];
+
+  const handleNavClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      // External page link (no hash) — let default behavior happen
+      if (!href.startsWith("#")) return;
+
+      e.preventDefault();
+      const sectionId = href.slice(1);
+      const isHome = router.pathname === "/";
+
+      if (isHome) {
+        // Already on home — just scroll
+        const el = document.getElementById(sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        } else if (sectionId === "home") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      } else {
+        // Navigate to home with hash — scroll after page loads
+        router.push(`/${href}`);
+      }
+    },
+    [router]
+  );
+
+  // After navigating to home with hash, scroll to the section
+  useEffect(() => {
+    if (router.pathname === "/" && window.location.hash) {
+      const sectionId = window.location.hash.slice(1);
+      // Small delay to let the page render
+      const timer = setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [router.pathname, router.asPath]);
 
   return (
     <>
@@ -68,21 +111,32 @@ const Header = () => {
       >
         <div className="container-custom flex justify-between items-center">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
-            <div className="w-12 h-12 bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-serif text-2xl font-bold">
-                L
-              </span>
-            </div>
+          <Link
+            href="/"
+            onClick={(e) => {
+              if (router.pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+            className="flex items-center gap-2"
+          >
+            <Image
+              src="/images/logo.png"
+              alt="Logo"
+              width={48}
+              height={48}
+              className="w-12 h-12 object-contain"
+            />
             <div className="flex flex-col">
               <span className="font-serif text-xl font-bold text-foreground">
-                Landshaper
+                Dong A
               </span>
               <span className="text-xs text-muted-foreground uppercase tracking-widest">
-                Landscaping
+                Crop Protection
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
@@ -90,6 +144,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-foreground font-medium hover:text-primary transition-colors relative group"
               >
                 {link.name}
@@ -144,13 +199,23 @@ const Header = () => {
                     key={link.name}
                     href={link.href}
                     className="text-foreground font-medium hover:text-primary transition-colors py-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      setIsMobileMenuOpen(false);
+                      handleNavClick(e, link.href);
+                    }}
                   >
                     {link.name}
                   </a>
                 ))}
-                <a href="#contact" className="btn-primary text-center mt-4">
-                  Get a Quote
+                <a
+                  href="#contact"
+                  className="btn-primary text-center mt-4"
+                  onClick={(e) => {
+                    setIsMobileMenuOpen(false);
+                    handleNavClick(e, "#contact");
+                  }}
+                >
+                  Liên hệ
                 </a>
               </nav>
             </motion.div>

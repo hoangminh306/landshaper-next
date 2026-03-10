@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* Landshaper Color Palette */
+    /* Dong A Color Palette */
     --background: 0 0% 100%;
     --foreground: 210 11% 15%;
 
@@ -167,6 +167,14 @@
 
   .animate-slide-in-right {
     animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
 

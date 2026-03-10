@@ -132,7 +132,7 @@ const ShopView = () => {
       <Header />
       <main>
         <Breadcrumb
-          breadcrumbs={[{ label: "Home", href: "/" }, { label: "Shop" }]}
+          breadcrumbs={[{ label: "Trang chủ", href: "/" }, { label: "Sản phẩm" }]}
         />
 
         <section className="py-12 md:py-20">
@@ -140,9 +140,9 @@ const ShopView = () => {
             {/* Sorting Bar */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10 gap-4">
               <p className="text-muted-foreground text-sm">
-                Showing {startIndex + 1}-
-                {Math.min(endIndex, sortedProducts.length)} of{" "}
-                {sortedProducts.length} Results
+                Hiển thị {startIndex + 1}-
+                {Math.min(endIndex, sortedProducts.length)} trên{" "}
+                {sortedProducts.length} sản phẩm
               </p>
               <select
                 value={sortBy}
@@ -152,7 +152,7 @@ const ShopView = () => {
                 }}
                 className="border border-border bg-background text-foreground text-sm px-4 py-2 focus:outline-none focus:ring-1 focus:ring-primary"
               >
-                <option value="default">Default Sorting</option>
+                <option value="default">Mặc định</option>
                 <option value="price-asc">Giá: Thấp đến Cao</option>
                 <option value="price-desc">Giá: Cao đến Thấp</option>
                 <option value="name">Theo tên</option>

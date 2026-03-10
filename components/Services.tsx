@@ -7,22 +7,26 @@ const services = [
   {
     image: "/images/service-1.jpg",
     title: "Design & Planting",
-    description: "Environmental problems result when exotic plants are placed in the landscape",
+    description:
+      "Environmental problems result when exotic plants are placed in the landscape",
   },
   {
     image: "/images/service-2.jpg",
     title: "Irrigation and Drainage",
-    description: "Environmental problems result when exotic plants are placed in the landscape",
+    description:
+      "Environmental problems result when exotic plants are placed in the landscape",
   },
   {
     image: "/images/service-3.jpg",
     title: "Snow & Ice Removal",
-    description: "Environmental problems result when exotic plants are placed in the landscape",
+    description:
+      "Environmental problems result when exotic plants are placed in the landscape",
   },
   {
     image: "/images/service-4.jpg",
     title: "Lawn Care & Maintenance",
-    description: "Environmental problems result when exotic plants are placed in the landscape",
+    description:
+      "Environmental problems result when exotic plants are placed in the landscape",
   },
 ];
 
@@ -31,7 +35,7 @@ const Services = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="py-12 md:py-20 lg:py-32 bg-background">
+    <section id="services" className="py-12 md:py-20 bg-background">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
           {/* Left Content */}
@@ -44,16 +48,22 @@ const Services = () => {
             <p className="section-subtitle">Welcome to our Company</p>
             <h2 className="section-title mb-6">Services We Do.</h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              We provide ongoing property maintenance which includes lawn mowing, fertilizing, 
-              spring and fall cleanups, de-thatching, aerating, seeding, mulching, edging, 
-              herbicide application, plant health care, snow plowing, pruning, and tree care and removal.
+              We provide ongoing property maintenance which includes lawn
+              mowing, fertilizing, spring and fall cleanups, de-thatching,
+              aerating, seeding, mulching, edging, herbicide application, plant
+              health care, snow plowing, pruning, and tree care and removal.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              We also provide the design and installation of many landscape construction projects 
-              including walkways, steps, retaining walls, patios, veneer stone, planting, trans-planting, 
-              drainage systems, lawn renovation and installation, paver driveways, cobblestone edging, and excavation.
+              We also provide the design and installation of many landscape
+              construction projects including walkways, steps, retaining walls,
+              patios, veneer stone, planting, trans-planting, drainage systems,
+              lawn renovation and installation, paver driveways, cobblestone
+              edging, and excavation.
             </p>
-            <a href="#services" className="btn-primary inline-flex items-center gap-2">
+            <a
+              href="#services"
+              className="btn-primary inline-flex items-center gap-2"
+            >
               Go to All Services
               <ArrowRight className="w-4 h-4" />
             </a>

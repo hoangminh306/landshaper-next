@@ -11,7 +11,7 @@ const RelatedProducts = ({ products }: RelatedProductsProps) => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-12 md:py-20 lg:py-32 bg-secondary">
+    <section className="py-12 md:py-20 bg-secondary">
       <div className="container-custom">
         {/* Header */}
         <motion.div
@@ -21,9 +21,9 @@ const RelatedProducts = ({ products }: RelatedProductsProps) => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-12"
         >
-          <p className="section-subtitle">Check Our Other Products</p>
+          {/* <p className="section-subtitle">Xem thêm sản phẩm</p> */}
           <h2 className="section-title">
-            Related <span className="text-primary">Products</span>
+            Sản phẩm <span className="text-primary">liên quan</span>
           </h2>
         </motion.div>
 

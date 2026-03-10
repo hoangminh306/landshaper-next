@@ -8,6 +8,7 @@ import {
   Linkedin,
   ArrowRight,
 } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,21 +22,24 @@ const Footer = () => {
             {/* Company Info */}
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-12 h-12 bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground font-serif text-2xl font-bold">
-                    L
-                  </span>
-                </div>
-                <div>
-                  <span className="font-serif text-xl font-bold">
-                    Landshaper
+                <Image
+                  src="/images/logo.png"
+                  alt="Logo"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain"
+                />
+                <div className="flex flex-col">
+                  <span className="font-serif text-xl font-bold">Dong A</span>
+                  <span className="text-xs uppercase tracking-widest">
+                    Crop Protection
                   </span>
                 </div>
               </div>
               <p className="text-dark-foreground/70 mb-6 leading-relaxed">
-                Creating beautiful outdoor spaces since 1982. We provide
-                professional landscaping services for residential and commercial
-                properties.
+                Chuyên cung cấp các dòng thuốc bảo vệ thực vật chất lượng cao,
+                giúp phòng trừ sâu bệnh hiệu quả và nâng cao năng suất cây
+                trồng.
               </p>
               <div className="flex gap-3">
                 <a
@@ -67,15 +71,16 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-serif text-xl font-bold mb-6">Quick Links</h4>
+              <h4 className="font-serif text-xl font-bold mb-6">
+                Liên kết nhanh
+              </h4>
               <ul className="space-y-3">
                 {[
-                  "Home",
-                  "About Us",
-                  "Services",
-                  "Projects",
-                  "Testimonials",
-                  "Contact",
+                  "Trang chủ",
+                  "Giới thiệu",
+                  "Sản phẩm",
+                  "Đánh giá",
+                  "Liên hệ",
                 ].map((link) => (
                   <li key={link}>
                     <a
@@ -117,7 +122,7 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h4 className="font-serif text-xl font-bold mb-6">Contact Us</h4>
+              <h4 className="font-serif text-xl font-bold mb-6">Liên hệ</h4>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
@@ -155,20 +160,20 @@ const Footer = () => {
       <div className="border-t border-dark-foreground/10 py-6">
         <div className="container-custom flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-dark-foreground/60 text-sm">
-            © {currentYear} Landshaper. All Rights Reserved.
+            © {currentYear} Landshaper. Bảo lưu mọi quyền.
           </p>
           <div className="flex gap-6 text-sm">
             <a
               href="#"
               className="text-dark-foreground/60 hover:text-primary transition-colors"
             >
-              Privacy Policy
+              Chính sách bảo mật
             </a>
             <a
               href="#"
               className="text-dark-foreground/60 hover:text-primary transition-colors"
             >
-              Terms of Service
+              Điều khoản dịch vụ
             </a>
           </div>
         </div>

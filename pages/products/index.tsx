@@ -5,7 +5,7 @@ export default function ShopPage() {
   return (
     <>
       <Head>
-        <title>Shop - Landshaper</title>
+        <title>Shop - Dong A - Crop Protection</title>
       </Head>
       <ShopView />
     </>

@@ -55,7 +55,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="py-12 md:py-20 lg:py-32 bg-secondary">
+    <section id="testimonials" className="py-12 md:py-20 bg-secondary">
       <div className="container-custom">
         <motion.div
           ref={ref}

@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Landshaper - Professional Landscaping Services Since 1982</title>
+        <title>Dong A - Crop Protection</title>
       </Head>
       <HomeView />
     </>

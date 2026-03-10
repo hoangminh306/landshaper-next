@@ -5,17 +5,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     image: "/images/hero-1.jpg",
-    // subtitle: "A Complete Solution for",
-    title: "Your Landscaping Vision.",
+    title: "Thuốc bảo vệ thực vật chất lượng cao",
     description:
-      "We provide cost-effective residential and commercial landscaping solutions and specialize in water conservation and drought-tolerant landscapes.",
+      "Cung cấp các giải pháp bảo vệ cây trồng hiệu quả cho nông nghiệp, chuyên về phòng trừ sâu bệnh và nâng cao năng suất.",
   },
   {
     image: "/images/hero-2.jpg",
-    // subtitle: "We Providing landscaping",
-    title: "Services Since 1982",
+    title: "Uy tín hàng đầu trong ngành",
     description:
-      "Over 40 years of experience creating beautiful outdoor spaces for homes and businesses across the nation.",
+      "Nhiều năm kinh nghiệm cung cấp sản phẩm thuốc bảo vệ thực vật đạt chuẩn chất lượng cho nông dân trên cả nước.",
   },
   {
     image: "/slide-bg-3.png",

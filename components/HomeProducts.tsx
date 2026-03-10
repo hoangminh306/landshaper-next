@@ -8,15 +8,15 @@ import { formatCurrency, ZALO_PHONE_DEFAULT } from "../utils";
 
 const featuredProduct = {
   slug: "thuoc-tru-sau-1",
-  name: "Thuốc trừ sâu",
+  name: "Thuốc trừ sâu Aragon 40WG",
   price: 125000,
   description:
-    "Know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues desires to occasionally circumstances. Professional landscaping equipment designed for precision trimming and garden maintenance.",
+    "Sản phẩm thuốc bảo vệ thực vật chất lượng cao, giúp phòng trừ sâu bệnh hiệu quả. Được kiểm định bởi các cơ quan chức năng, đảm bảo an toàn cho cây trồng và môi trường canh tác.",
   images: [
     "/images/sample-product.png",
-    "/images/service-2.jpg",
-    "/images/service-3.jpg",
-    "/images/service-4.jpg",
+    "/images/sample-1.png",
+    "/images/sample-2.png",
+    "/images/sample-3.png",
   ],
 };
 
@@ -63,7 +63,7 @@ export const FeaturedProducts = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-12"
         >
-          <p className="section-subtitle">Sản phẩm bán chạy</p>
+          {/* <p className="section-subtitle">Sản phẩm bán chạy</p> */}
           <h2 className="section-title">
             Sản Phẩm <span className="text-primary">Nổi Bật</span>
           </h2>
@@ -81,7 +81,7 @@ export const FeaturedProducts = () => {
               <img
                 src={featuredProduct.images[selectedImage]}
                 alt={featuredProduct.name}
-                className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-scale-down transition-transform duration-500 hover:scale-105"
               />
             </div>
             <div className="grid grid-cols-4 gap-3">
@@ -110,13 +110,13 @@ export const FeaturedProducts = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-start"
           >
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-foreground mb-4">
               {featuredProduct.name}
             </h3>
 
-            <div className="flex items-center gap-3 mb-6">
+            {/* <div className="flex items-center gap-3 mb-6">
               <span className="text-3xl md:text-4xl font-bold text-primary">
                 {formatCurrency(featuredProduct.price)}đ
               </span>
@@ -129,7 +129,7 @@ export const FeaturedProducts = () => {
               <p className="text-muted-foreground leading-relaxed">
                 {featuredProduct.description}
               </p>
-            </div>
+            </div> */}
 
             <div className="flex flex-wrap items-center gap-4">
               <button
@@ -181,7 +181,7 @@ export const OtherProducts = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-12"
         >
-          <p className="section-subtitle">Khám phá thêm</p>
+          {/* <p className="section-subtitle">Khám phá thêm</p> */}
           <h2 className="section-title">
             Sản Phẩm <span className="text-primary">Khác</span>
           </h2>
@@ -208,7 +208,7 @@ export const OtherProducts = () => {
         >
           <Link
             href="/products"
-            className="btn-primary inline-flex items-center gap-2"
+            className="btn-primary inline-flex items-center gap-2 mt-10"
           >
             Xem tất cả sản phẩm
             <ArrowRight className="w-4 h-4" />

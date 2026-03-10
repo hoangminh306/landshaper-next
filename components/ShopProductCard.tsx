@@ -22,7 +22,7 @@ const ShopProductCard = ({
   zaloPhone = ZALO_PHONE_DEFAULT,
 }: ShopProductCardProps) => {
   return (
-    <div className="group mb-[50px] border border-border bg-background">
+    <div className="group border border-border bg-background">
       {/* Image Box */}
       <div className="relative overflow-hidden">
         <img
