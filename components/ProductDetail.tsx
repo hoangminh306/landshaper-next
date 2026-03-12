@@ -136,10 +136,16 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col justify-center"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-foreground mb-4">
               {product.name}
             </h2>
+
+            <button className="btn-primary flex items-center gap-2 w-fit">
+              {/* <ShoppingCart className="w-5 h-5" /> */}
+              Liên hệ Zalo
+            </button>
 
             {/* Stock Status */}
             {/* <div className="mb-4">
@@ -175,11 +181,6 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
                 {product.description}
               </p>
             </div> */}
-
-            <button className="btn-primary flex items-center gap-2">
-              {/* <ShoppingCart className="w-5 h-5" /> */}
-              Liên hệ Zalo
-            </button>
 
             {/* Separator */}
             {/* <div className="border-t border-border mb-8" /> */}

@@ -41,7 +41,7 @@ const Footer = () => {
                 giúp phòng trừ sâu bệnh hiệu quả và nâng cao năng suất cây
                 trồng.
               </p>
-              <div className="flex gap-3">
+              {/* <div className="flex gap-3">
                 <a
                   href="#"
                   className="w-10 h-10 bg-dark-foreground/10 hover:bg-primary flex items-center justify-center transition-colors"
@@ -66,7 +66,7 @@ const Footer = () => {
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
-              </div>
+              </div> */}
             </div>
 
             {/* Quick Links */}
