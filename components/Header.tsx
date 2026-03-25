@@ -163,10 +163,17 @@ const Header = () => {
             <a href="#" className="hover:text-primary transition-colors">
               <img src="/icon-zalo.png" alt="Zalo" className="w-10 h-w-10" />
             </a>
-            {/* <a href="#" className="hover:text-primary transition-colors">
-              <Facebook className="w-5 h-5" />
+            <a href="#" className="hover:text-primary transition-colors">
+              <img
+                src="/icon-facebook.png"
+                alt="Facebook"
+                className="w-9 h-w-9"
+              />
             </a>
             <a href="#" className="hover:text-primary transition-colors">
+              <img src="/icon-tiktok.png" alt="Tiktok" className="w-9 h-w-9" />
+            </a>
+            {/* <a href="#" className="hover:text-primary transition-colors">
               <Instagram className="w-5 h-5" />
             </a> */}
           </div>
