@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}", "./hooks/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./lib/**/*.{ts,tsx}",
+    "./hooks/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -10,6 +15,7 @@ export default {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        "max-sm": { max: "639px" },
       },
     },
     extend: {
@@ -61,8 +67,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Open Sans', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        sans: ["Open Sans", "sans-serif"],
+        serif: ["Merriweather", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

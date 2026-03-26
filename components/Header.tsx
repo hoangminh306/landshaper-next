@@ -161,17 +161,25 @@ const Header = () => {
           </div> */}
           <div className="flex items-center gap-4">
             <a href="#" className="hover:text-primary transition-colors">
-              <img src="/icon-zalo.png" alt="Zalo" className="w-10 h-w-10" />
+              <img
+                src="/icon-zalo.png"
+                alt="Zalo"
+                className="w-[42px] h-[42px] max-sm:w-[38px] max-sm:h-[38px]"
+              />
             </a>
             <a href="#" className="hover:text-primary transition-colors">
               <img
                 src="/icon-facebook.png"
                 alt="Facebook"
-                className="w-9 h-w-9"
+                className="w-9 h-w-9 max-sm:w-8 max-sm:h-8"
               />
             </a>
             <a href="#" className="hover:text-primary transition-colors">
-              <img src="/icon-tiktok.png" alt="Tiktok" className="w-9 h-w-9" />
+              <img
+                src="/icon-tiktok.png"
+                alt="Tiktok"
+                className="w-9 h-w-9 max-sm:w-8 max-sm:h-8"
+              />
             </a>
             {/* <a href="#" className="hover:text-primary transition-colors">
               <Instagram className="w-5 h-5" />

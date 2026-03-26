@@ -53,12 +53,12 @@ export const FeaturedProducts = () => {
   const [selectedImage, setSelectedImage] = useState(0);
 
   return (
-    <section className="py-12 md:py-20 lg:py-24 bg-secondary">
+    <section className="py-12 md:py-20 lg:py-24 bg-secondary overflow-hidden">
       <div className="container-custom">
         {/* Header */}
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-12"
@@ -172,11 +172,11 @@ export const OtherProducts = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-12 md:py-20 lg:py-24 bg-background">
+    <section className="py-12 md:py-20 lg:py-24 bg-background overflow-hidden">
       <div className="container-custom">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-12"
@@ -187,13 +187,13 @@ export const OtherProducts = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 min-h-[400px]">
           {otherProducts.map((product, index) => (
             <motion.div
               key={product.slug}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
             >
               <ShopProductCard product={product} />
             </motion.div>

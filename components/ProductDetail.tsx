@@ -63,12 +63,13 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
   return (
     <section className="py-12 md:py-20 bg-background">
       <div className="container-custom" ref={ref}>
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           {/* Product Gallery */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
+            className="order-1"
           >
             {/* Main Image */}
             <div className="relative overflow-hidden mb-4 bg-secondary">
@@ -136,13 +137,13 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-center order-2 sm:mt-0 mt-4"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-foreground mb-4">
               {product.name}
             </h2>
 
-            <button className="btn-primary flex items-center gap-2 w-fit">
+            <button className="btn-primary flex items-center gap-2 w-fit w-full sm:w-fit justify-center">
               {/* <ShoppingCart className="w-5 h-5" /> */}
               Liên hệ Zalo
             </button>
@@ -243,10 +244,10 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="col-span-2 w-10/12 mx-auto"
+            className="col-span-1 lg:col-span-2 w-full lg:w-10/12 mx-auto order-3 md:mt-8"
           >
             <div>
-              <h3 className="text-3xl font-serif font-bold text-foreground mb-3">
+              <h3 className="text-xl md:text-3xl font-serif font-bold text-foreground mb-3">
                 Mô tả sản phẩm
               </h3>
               <div

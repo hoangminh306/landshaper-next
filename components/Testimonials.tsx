@@ -68,63 +68,53 @@ const Testimonials = () => {
           <h2 className="section-title">Đánh giá từ khách hàng</h2>
         </motion.div>
 
-        <div className="relative max-w-4xl mx-auto">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
-              className="bg-background p-5 md:p-8 lg:p-12"
-            >
-              <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
-                {/* Image */}
-                <div className="flex-shrink-0">
-                  <div className="relative">
-                    <img
-                      src={testimonials[currentIndex].image}
-                      alt={testimonials[currentIndex].name}
-                      className="w-24 h-24 md:w-32 md:h-32 object-cover"
-                    />
-                    <div className="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 w-10 h-10 md:w-12 md:h-12 bg-primary flex items-center justify-center">
-                      <Quote className="w-4 h-4 md:w-6 md:h-6 text-primary-foreground" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 text-center md:text-left">
-                  {/* Rating */}
-                  <div className="flex justify-center md:justify-start gap-1 mb-3 md:mb-4">
+        <div className="relative max-w-4xl mx-auto px-4">
+          <div className="relative min-h-[300px] md:min-h-[250px] flex items-center justify-center">
+            <AnimatePresence mode="popLayout" initial={false}>
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -10 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="w-full bg-primary/5 border border-primary/10 p-6 md:p-10 relative"
+              >
+                <Quote className="w-10 h-10 md:w-12 md:h-12 text-primary/20 absolute top-4 right-4" />
+                <div className="relative z-10">
+                  <div className="flex mb-4">
                     {[...Array(testimonials[currentIndex].rating)].map(
                       (_, i) => (
                         <Star
                           key={i}
-                          className="w-4 h-4 md:w-5 md:h-5 fill-primary text-primary"
+                          className="w-4 h-4 md:w-5 md:h-5 text-primary fill-primary"
                         />
                       )
                     )}
                   </div>
 
-                  <p className="text-muted-foreground text-sm md:text-base lg:text-lg leading-relaxed mb-4 md:mb-6 italic">
-                    &ldquo;{testimonials[currentIndex].text}&rdquo;
+                  <p className="text-lg md:text-xl lg:text-2xl text-foreground italic mb-6 md:mb-8 leading-relaxed">
+                    {testimonials[currentIndex].text}
                   </p>
 
-                  <div>
-                    <h4 className="font-serif text-lg md:text-xl font-bold text-foreground">
-                      {testimonials[currentIndex].name}
-                    </h4>
-                    <p className="text-primary font-medium text-sm md:text-base">
-                      {testimonials[currentIndex].role}
-                      {/* {testimonials[currentIndex].company} */}
-                    </p>
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={testimonials[currentIndex].image}
+                      alt={testimonials[currentIndex].name}
+                      className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-primary/20"
+                    />
+                    <div>
+                      <h4 className="font-bold text-foreground text-base md:text-lg">
+                        {testimonials[currentIndex].name}
+                      </h4>
+                      <p className="text-muted-foreground text-sm md:text-base">
+                        {testimonials[currentIndex].role}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-
+              </motion.div>
+            </AnimatePresence>
+          </div>
           {/* Navigation */}
           <div className="flex justify-center gap-2 md:gap-4 mt-6 md:mt-8">
             <button
